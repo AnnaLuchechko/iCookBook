@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "launch.png",
+      "filename" : "launch1x.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "launch-1.png",
+      "filename" : "launch2x.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "launch-2.png",
+      "filename" : "launch3x.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }
