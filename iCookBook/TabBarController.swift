@@ -1,5 +1,5 @@
 //
-//  CategoriesViewController.swift
+//  TabBarController.swift
 //  iCookBook
 //
 //  Created by Anna Luchechko on 04.05.2020.
@@ -8,15 +8,14 @@
 
 import UIKit
 
-class CategoriesViewController: UIViewController {
-
+class TabBarController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBar.unselectedItemTintColor = UIColor.black // Unselected items color
+
     }
 
-    @IBAction func push(_ sender: UIButton) {
-        print ("eeeeee")
-    }
-    
 
 }

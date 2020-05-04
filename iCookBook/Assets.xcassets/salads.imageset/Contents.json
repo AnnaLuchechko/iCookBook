@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "heart.png",
+      "filename" : "salads.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "heart-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "heart-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
