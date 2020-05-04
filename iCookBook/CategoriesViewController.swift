@@ -16,12 +16,24 @@ class CategoriesViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func push(_ sender: UIButton) {
-        let imagesArray = ["breakfast", "lunch", "dinner", "maincources", "sidedishes", "desserts", "snacks", "salads", "sweets", "soup", "drinks", "sauces"]
+    @IBAction func categoriesButtonFilled(_ sender: UIButton) {
+        let categoriesFilledImagesArray = ["breakfast", "lunch", "dinner", "maincources", "sidedishes", "desserts", "snacks", "salads", "sweets", "soup", "drinks", "sauces"]
         
-        let imagetest = UIImage(named: imagesArray[sender.tag])
-        imageViews[sender.tag].image = imagetest
+        let categoriesFilledImage = UIImage(named: categoriesFilledImagesArray[sender.tag])
+        imageViews[sender.tag].image = categoriesFilledImage
+
+        print(categoriesFilledImagesArray[sender.tag])
+
+
     }
     
-
+    @IBAction func categoriesButtonUnfilled(_ sender: UIButton) {
+        let categoriesUnfilledImagesArray = ["breakfast1", "lunch1", "dinner1", "maincources1", "sidedishes1", "desserts1", "snacks1", "salads1", "sweets1", "soup1", "drinks1", "sauces1"]
+        
+        let unfilledImageCategories = UIImage(named: categoriesUnfilledImagesArray[sender.tag])
+        imageViews[sender.tag].image = unfilledImageCategories
+        
+        print(categoriesUnfilledImagesArray[sender.tag])
+    }
+    
 }

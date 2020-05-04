@@ -13,7 +13,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBar.unselectedItemTintColor = UIColor.black // Unselected items color
+        self.tabBar.unselectedItemTintColor = UIColor.black // Text color of unselected items
 
     }
 
