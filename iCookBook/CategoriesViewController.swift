@@ -9,13 +9,18 @@
 import UIKit
 
 class CategoriesViewController: UIViewController {
-
+    
+    @IBOutlet var imageViews: [UIImageView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func push(_ sender: UIButton) {
-        print ("eeeeee")
+        let imagesArray = ["breakfast", "lunch", "dinner", "maincources", "sidedishes", "desserts", "snacks", "salads", "sweets", "soup", "drinks", "sauces"]
+        
+        let imagetest = UIImage(named: imagesArray[sender.tag])
+        imageViews[sender.tag].image = imagetest
     }
     
 

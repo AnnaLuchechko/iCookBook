@@ -93,48 +93,48 @@
                                 <rect key="frame" x="11" y="126" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lunch1" translatesAutoresizingMaskIntoConstraints="NO" id="UTy-Ta-aP5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lunch1" translatesAutoresizingMaskIntoConstraints="NO" id="UTy-Ta-aP5">
                                 <rect key="frame" x="125" y="126" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dinner1" translatesAutoresizingMaskIntoConstraints="NO" id="FpV-eK-3O7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dinner1" translatesAutoresizingMaskIntoConstraints="NO" id="FpV-eK-3O7">
                                 <rect key="frame" x="237" y="126" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="desserts1" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-V9-6sv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="desserts1" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-V9-6sv">
                                 <rect key="frame" x="239" y="226" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sidedishes1" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-mv-v22">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sidedishes1" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-mv-v22">
                                 <rect key="frame" x="125" y="226" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maincources1" translatesAutoresizingMaskIntoConstraints="NO" id="D7O-Q7-QYk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maincources1" translatesAutoresizingMaskIntoConstraints="NO" id="D7O-Q7-QYk">
                                 <rect key="frame" x="11" y="226" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snacks1" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-0S-Bjd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snacks1" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-0S-Bjd">
                                 <rect key="frame" x="11" y="326" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="salads1" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-EC-blO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="salads1" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-EC-blO">
                                 <rect key="frame" x="125" y="326" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweets1" translatesAutoresizingMaskIntoConstraints="NO" id="UxD-ZT-OkB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sweets1" translatesAutoresizingMaskIntoConstraints="NO" id="UxD-ZT-OkB">
                                 <rect key="frame" x="239" y="326" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sauces1" translatesAutoresizingMaskIntoConstraints="NO" id="h7n-by-gIQ">
-                                <rect key="frame" x="239" y="426" width="70" height="70"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soup1" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-FA-7Cd">
+                                <rect key="frame" x="11" y="426" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drinks1" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-Jb-0yW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drinks1" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-Jb-0yW">
                                 <rect key="frame" x="125" y="426" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soup1" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-FA-7Cd">
-                                <rect key="frame" x="11" y="426" width="70" height="70"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sauces1" translatesAutoresizingMaskIntoConstraints="NO" id="h7n-by-gIQ">
+                                <rect key="frame" x="239" y="426" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BREAKFAST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8R-GI-2Ig">
@@ -237,60 +237,93 @@
                                     <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="yqU-Yg-LDG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He6-HG-mEb" userLabel="LUNCH">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He6-HG-mEb" userLabel="LUNCH">
                                 <rect key="frame" x="125" y="126" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="mD5-Ij-9Cz"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY0-pX-6mO" userLabel="DINNER">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY0-pX-6mO" userLabel="DINNER">
                                 <rect key="frame" x="239" y="126" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="YwU-Fp-45o"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APE-WR-e13" userLabel="MAINCOURSES">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APE-WR-e13" userLabel="MAINCOURSES">
                                 <rect key="frame" x="11" y="226" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="LDS-Ew-Abc"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asS-5V-LDs" userLabel="SIDEDISHES">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asS-5V-LDs" userLabel="SIDEDISHES">
                                 <rect key="frame" x="125" y="226" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="SUC-zw-kb4"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIc-bC-NpB" userLabel="DESSERTS">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIc-bC-NpB" userLabel="DESSERTS">
                                 <rect key="frame" x="239" y="226" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="C3H-jn-yT3"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oge-Xp-CHC" userLabel="SNACKS">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oge-Xp-CHC" userLabel="SNACKS">
                                 <rect key="frame" x="11" y="326" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="w1J-RY-erZ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-0q-a7W" userLabel="SALADS">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-0q-a7W" userLabel="SALADS">
                                 <rect key="frame" x="125" y="326" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="OHk-o5-BWF"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-kJ-eGp" userLabel="SWEETS">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-kJ-eGp" userLabel="SWEETS">
                                 <rect key="frame" x="239" y="326" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="cxh-yT-l1Z"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Pq-1oe" userLabel="SOUPS">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Pq-1oe" userLabel="SOUPS">
                                 <rect key="frame" x="11" y="426" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="CDn-ZI-cij"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-xM-bIS" userLabel="DRINKS">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-xM-bIS" userLabel="DRINKS">
                                 <rect key="frame" x="125" y="426" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="NLp-2C-DNx"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-cY-ihO" userLabel="SAUCES">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-cY-ihO" userLabel="SAUCES">
                                 <rect key="frame" x="239" y="426" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <connections>
+                                    <action selector="push:" destination="zO1-zG-iY2" eventType="touchDown" id="HM5-oW-ts5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIU-oU-BUJ">
                                 <rect key="frame" x="10" y="105" width="300" height="17"/>
@@ -300,7 +333,7 @@
                                     <fragment content="RECIPES BY CATEGORIES">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.31580595461928929" blue="0.26261877702389858" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" metaFont="menuBar"/>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -329,6 +362,20 @@
                         <color key="badgeColor" red="0.23137254901960785" green="0.33725490196078434" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="ZwO-by-IMo"/>
+                    <connections>
+                        <outletCollection property="imageViews" destination="d32-wc-EhT" collectionClass="NSMutableArray" id="HUX-Rh-pwP"/>
+                        <outletCollection property="imageViews" destination="UTy-Ta-aP5" collectionClass="NSMutableArray" id="mY9-L6-GMc"/>
+                        <outletCollection property="imageViews" destination="FpV-eK-3O7" collectionClass="NSMutableArray" id="Seg-7b-7vL"/>
+                        <outletCollection property="imageViews" destination="D7O-Q7-QYk" collectionClass="NSMutableArray" id="pQR-MH-Npf"/>
+                        <outletCollection property="imageViews" destination="Qit-mv-v22" collectionClass="NSMutableArray" id="BgX-nK-gFJ"/>
+                        <outletCollection property="imageViews" destination="WZY-V9-6sv" collectionClass="NSMutableArray" id="ed3-Nb-o2I"/>
+                        <outletCollection property="imageViews" destination="4mk-0S-Bjd" collectionClass="NSMutableArray" id="LAQ-wf-ku1"/>
+                        <outletCollection property="imageViews" destination="wpT-EC-blO" collectionClass="NSMutableArray" id="ttg-AQ-wwy"/>
+                        <outletCollection property="imageViews" destination="UxD-ZT-OkB" collectionClass="NSMutableArray" id="ztZ-Or-ArB"/>
+                        <outletCollection property="imageViews" destination="ApF-FA-7Cd" collectionClass="NSMutableArray" id="77O-Gs-Z5x"/>
+                        <outletCollection property="imageViews" destination="Pyc-Jb-0yW" collectionClass="NSMutableArray" id="RXd-QP-4D0"/>
+                        <outletCollection property="imageViews" destination="h7n-by-gIQ" collectionClass="NSMutableArray" id="UiR-Bc-18p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhM-7b-z6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
