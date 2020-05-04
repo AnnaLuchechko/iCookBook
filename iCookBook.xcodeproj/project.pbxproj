@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088D4531245FA019001B5FC2 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088D4530245FA019001B5FC2 /* CategoriesViewController.swift */; };
+		088D4533245FA0B0001B5FC2 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088D4532245FA0B0001B5FC2 /* DiscoverViewController.swift */; };
+		088D4535245FA0EA001B5FC2 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088D4534245FA0EA001B5FC2 /* FavouritesViewController.swift */; };
 		08BE805E245B635A001479E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE805D245B635A001479E3 /* AppDelegate.swift */; };
 		08BE8060245B635A001479E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE805F245B635A001479E3 /* SceneDelegate.swift */; };
 		08BE8062245B635A001479E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE8061245B635A001479E3 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		088D4530245FA019001B5FC2 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		088D4532245FA0B0001B5FC2 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		088D4534245FA0EA001B5FC2 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		08BE805A245B635A001479E3 /* iCookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BE805D245B635A001479E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08BE805F245B635A001479E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,9 @@
 				08BE805D245B635A001479E3 /* AppDelegate.swift */,
 				08BE805F245B635A001479E3 /* SceneDelegate.swift */,
 				08BE8061245B635A001479E3 /* ViewController.swift */,
+				088D4530245FA019001B5FC2 /* CategoriesViewController.swift */,
+				088D4532245FA0B0001B5FC2 /* DiscoverViewController.swift */,
+				088D4534245FA0EA001B5FC2 /* FavouritesViewController.swift */,
 				08BE8063245B635A001479E3 /* Main.storyboard */,
 				08BE8066245B635B001479E3 /* Assets.xcassets */,
 				08BE8068245B635B001479E3 /* LaunchScreen.storyboard */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088D4535245FA0EA001B5FC2 /* FavouritesViewController.swift in Sources */,
 				08BE8062245B635A001479E3 /* ViewController.swift in Sources */,
+				088D4531245FA019001B5FC2 /* CategoriesViewController.swift in Sources */,
 				08BE805E245B635A001479E3 /* AppDelegate.swift in Sources */,
 				08BE8060245B635A001479E3 /* SceneDelegate.swift in Sources */,
+				088D4533245FA0B0001B5FC2 /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

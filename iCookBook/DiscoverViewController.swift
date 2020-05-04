@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  DiscoverViewController.swift
 //  iCookBook
 //
-//  Created by Anna Luchechko on 30.04.2020.
+//  Created by Anna Luchechko on 04.05.2020.
 //  Copyright © 2020 Anna Luchechko. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class DiscoverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +16,3 @@ class ViewController: UIViewController {
 
 
 }
-
