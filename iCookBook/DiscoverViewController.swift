@@ -10,9 +10,18 @@ import UIKit
 
 class DiscoverViewController: UIViewController {
 
+    let recipeData = RecipeData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.recipeData.fetchRecipesJsonData(query: "lasagna") { (data) in
+            if let response = data {
+                DispatchQueue.main.async {
+                    let recipes = try? JSONDecoder().decode(Recipes.self, from: response)
+                    print (recipes?.results[0].title ?? "no result")
+                }
+            }
+        }
     }
-
-
 }
