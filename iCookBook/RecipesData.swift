@@ -37,4 +37,17 @@ class RecipeData {
         }
     }
     
+    func fetchImage(from url: URL, completionHandler: @escaping (_ data: Data?) -> ()) {
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print("Error fetching the image! 😢")
+                completionHandler(nil)
+            } else {
+                completionHandler(data)
+            }
+        }
+        dataTask.resume()
+    }
+    
 }

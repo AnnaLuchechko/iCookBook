@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		080F7881245FC5D400BB2A51 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F7880245FC5D400BB2A51 /* TabBarController.swift */; };
+		0812B8462462404F0057BFB3 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0812B8452462404F0057BFB3 /* RecipeCollectionViewCell.swift */; };
 		08304C792460E2B1007F3929 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08304C782460E2B1007F3929 /* Recipes.swift */; };
 		08304C7B2462100D007F3929 /* RecipesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08304C7A2462100D007F3929 /* RecipesData.swift */; };
 		088D4531245FA019001B5FC2 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088D4530245FA019001B5FC2 /* CategoriesViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		080F7880245FC5D400BB2A51 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0812B8452462404F0057BFB3 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		08304C782460E2B1007F3929 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		08304C7A2462100D007F3929 /* RecipesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesData.swift; sourceTree = "<group>"; };
 		088D4530245FA019001B5FC2 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				08BE805D245B635A001479E3 /* AppDelegate.swift */,
+				0812B8452462404F0057BFB3 /* RecipeCollectionViewCell.swift */,
 				08BE805F245B635A001479E3 /* SceneDelegate.swift */,
 				08BE8061245B635A001479E3 /* ViewController.swift */,
 				080F7880245FC5D400BB2A51 /* TabBarController.swift */,
@@ -158,6 +161,7 @@
 			files = (
 				088D4535245FA0EA001B5FC2 /* FavouritesViewController.swift in Sources */,
 				08304C7B2462100D007F3929 /* RecipesData.swift in Sources */,
+				0812B8462462404F0057BFB3 /* RecipeCollectionViewCell.swift in Sources */,
 				08BE8062245B635A001479E3 /* ViewController.swift in Sources */,
 				088D4531245FA019001B5FC2 /* CategoriesViewController.swift in Sources */,
 				08304C792460E2B1007F3929 /* Recipes.swift in Sources */,
