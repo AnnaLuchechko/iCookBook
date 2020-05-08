@@ -26,15 +26,19 @@ class DiscoverViewController: UIViewController {
     }
     
     func loadRecipes() {
-        self.recipeData.fetchRecipesJsonData(query: "lasagna") { (recipesData) in
-            if let data = recipesData {
-                DispatchQueue.main.async {  //Run asynchronous process on main thread
-                    self.recipes = try? JSONDecoder().decode(Recipes.self, from: data)  //Decode json -> struct Recipes -> recipes
-                    self.recipesCollectionView.reloadData()
+        if let soonacularApiURL = URL(string: self.recipeData.spoonacoolarApiURL(query: "omelet")) {
+            self.recipeData.fetchDataFromURL(from: soonacularApiURL) { (recipesData) in
+                if let data = recipesData {
+                    DispatchQueue.main.async {  //Run asynchronous process on main thread
+                        self.recipes = try? JSONDecoder().decode(Recipes.self, from: data)  //Decode json -> struct Recipes -> recipes
+                        self.recipesCollectionView.reloadData()
+                    }
+                } else {
+                    print("Error loading recipes structure");
                 }
-            } else {
-                print("Error loading recipes structure");
             }
+        } else {
+            print("error creating url for API")
         }
     }
     
@@ -76,7 +80,7 @@ extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewData
         
         let recipe = recipes?.results[indexPath.row]
         cell.recipeCellLabel.text = recipe?.title
-        self.recipeData.fetchImage(from: (recipe?.image)!) { (imageData) in //Fetch image for cell
+        self.recipeData.fetchDataFromURL(from: (recipe?.image)!) { (imageData) in //Fetch image for cell
             if let data = imageData {
                 DispatchQueue.main.async {
                     cell.recipeCellImageView.image = UIImage(data: data)
