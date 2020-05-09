@@ -80,12 +80,35 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="PKw-QM-mHD"/>
                     <connections>
-                        <outlet property="recipesCollectionView" destination="1nP-Mv-65L" id="4lD-zC-Qt8"/>
+                        <outlet property="recipesCollectionView" destination="1nP-Mv-65L" id="HI1-d8-trE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWv-DC-Zvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2663" y="355"/>
+        </scene>
+        <!--Recipe View Controller-->
+        <scene sceneID="Zlp-Wc-1TW">
+            <objects>
+                <viewController id="FzU-xI-s7i" userLabel="Recipe View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1JI-nQ-Fnq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7H-ON-WYs">
+                                <rect key="frame" x="-11" y="0.0" width="331" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ppb-NZ-oYl"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="b8t-8G-epK"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2eP-98-cDa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRn-fD-JEP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2662.5" y="1073.2394366197184"/>
         </scene>
         <!--Item-->
         <scene sceneID="gIS-Uc-l7M">
@@ -108,7 +131,6 @@
         <!--Item-->
         <scene sceneID="ugl-ef-0eg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Mm-Im-TIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="eJv-js-WaU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="yt7-oh-bKn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="koY-N7-AMN">
@@ -120,6 +142,7 @@
                         <segue destination="bqx-vL-Rl7" kind="relationship" relationship="rootViewController" id="FUX-Sr-JlW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Mm-Im-TIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2018" y="-406"/>
         </scene>
@@ -163,7 +186,6 @@
         <!--Categories-->
         <scene sceneID="Owu-aT-IhI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lhM-7b-z6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="zO1-zG-iY2" userLabel="Categories" customClass="CategoriesViewController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zxf-uq-ZO1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -565,6 +587,7 @@
                         <outletCollection property="categoryButtonLabels" destination="N2o-97-dn6" collectionClass="NSMutableArray" id="akL-dw-0Sq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhM-7b-z6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3294" y="355"/>
         </scene>

@@ -26,7 +26,7 @@ class DiscoverViewController: UIViewController {
     }
     
     func loadRecipes() {
-        if let soonacularApiURL = URL(string: self.recipeData.spoonacoolarApiURL(query: "omelet")) {
+        if let soonacularApiURL = URL(string: self.recipeData.spoonacoolarApiURL(query: "pizza")) {
             self.recipeData.fetchDataFromURL(from: soonacularApiURL) { (recipesData) in
                 if let data = recipesData {
                     DispatchQueue.main.async {  //Run asynchronous process on main thread
