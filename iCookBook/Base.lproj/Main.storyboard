@@ -90,7 +90,7 @@
         <!--Recipe View Controller-->
         <scene sceneID="Zlp-Wc-1TW">
             <objects>
-                <viewController id="FzU-xI-s7i" userLabel="Recipe View Controller" sceneMemberID="viewController">
+                <viewController id="FzU-xI-s7i" userLabel="Recipe View Controller" customClass="RecipeViewController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JI-nQ-Fnq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
