@@ -81,6 +81,7 @@
                     <navigationItem key="navigationItem" id="PKw-QM-mHD"/>
                     <connections>
                         <outlet property="recipesCollectionView" destination="1nP-Mv-65L" id="HI1-d8-trE"/>
+                        <segue destination="FzU-xI-s7i" kind="show" id="gkU-Sj-lEq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWv-DC-Zvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,13 +91,13 @@
         <!--Recipe View Controller-->
         <scene sceneID="Zlp-Wc-1TW">
             <objects>
-                <viewController id="FzU-xI-s7i" userLabel="Recipe View Controller" customClass="RecipeViewController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeViewController" id="FzU-xI-s7i" userLabel="Recipe View Controller" customClass="RecipeViewController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JI-nQ-Fnq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7H-ON-WYs">
-                                <rect key="frame" x="-11" y="0.0" width="331" height="568"/>
+                                <rect key="frame" x="-11" y="44" width="331" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ppb-NZ-oYl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="b8t-8G-epK"/>
@@ -105,10 +106,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2eP-98-cDa"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vxz-My-Dz9"/>
+                    <connections>
+                        <outlet property="recipeScrollView" destination="C7H-ON-WYs" id="tKT-Iu-ccL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRn-fD-JEP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2662.5" y="1073.2394366197184"/>
+            <point key="canvasLocation" x="-2664.375" y="1076.4084507042253"/>
         </scene>
         <!--Item-->
         <scene sceneID="gIS-Uc-l7M">

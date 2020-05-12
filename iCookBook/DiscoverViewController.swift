@@ -91,4 +91,15 @@ extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewData
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let recipeViewController = storyboard?.instantiateViewController(identifier: "RecipeViewController") as? RecipeViewController
+        
+        
+        let imageURLString = "https://spoonacular.com/recipeImages/" + String((recipes?.results[indexPath.row].id)!) + "-556x370.jpg"
+        recipeViewController?.imageURL = imageURLString
+        recipeViewController?.recipes = self.recipes
+        
+        self.navigationController?.pushViewController(recipeViewController!, animated: true)
+    }
 }
