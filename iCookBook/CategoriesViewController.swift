@@ -21,6 +21,14 @@ class CategoriesViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController?.searchBar.tintColor = .white
+
+    }
+    
+    func searchByRecipe(recipe: String) {
+        let discoverViewController = storyboard?.instantiateViewController(identifier: "discoverView") as? DiscoverViewController
+        self.navigationController?.pushViewController(discoverViewController!, animated: true)
+        discoverViewController?.loadRecipes(recipe: recipe)
     }
 
     @IBAction func categoriesButtonFilled(_ sender: UIButton) {
@@ -45,6 +53,8 @@ class CategoriesViewController: UIViewController {
         imageViews[sender.tag].image = categoriesFilledImage
         
         categoryButtonLabels[sender.tag].textColor = buttonLabelColor[sender.tag]
+        
+        searchByRecipe(recipe: categoriesFilledImagesArray[sender.tag])
     }
     
     @IBAction func categoriesButtonUnfilled(_ sender: UIButton) {

@@ -32,8 +32,9 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         loadRecipes(recipe: "egg")
 
         searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "Search here..."
         searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search here..."
+
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -95,15 +96,17 @@ extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewData
         cell.recipeCellImageView.layer.cornerRadius = 10    //Round bounds
         cell.recipeCellImageView.layer.masksToBounds = true
         
-        let recipe = recipes?.results[indexPath.row]
-        cell.recipeCellLabel.text = recipe?.title
-        self.recipeData.fetchDataFromURL(from: (recipe?.image)!) { (imageData) in //Fetch image for cell
-            if let data = imageData {
-                DispatchQueue.main.async {
-                    cell.recipeCellImageView.image = UIImage(data: data)
+        if ((recipes?.results.count)! > 0) {
+            let recipe = recipes?.results[indexPath.row]
+            cell.recipeCellLabel.text = recipe?.title
+            self.recipeData.fetchDataFromURL(from: (recipe?.image)!) { (imageData) in //Fetch image for cell
+                if let data = imageData {
+                    DispatchQueue.main.async {
+                        cell.recipeCellImageView.image = UIImage(data: data)
+                    }
+                } else {
+                    print("Error loading image");
                 }
-            } else {
-                print("Error loading image");
             }
         }
         return cell

@@ -11,7 +11,7 @@
         <!--Discover-->
         <scene sceneID="Nhw-C6-4OJ">
             <objects>
-                <viewController id="jaW-6c-EOM" userLabel="Discover" customClass="DiscoverViewController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="discoverView" id="jaW-6c-EOM" userLabel="Discover" customClass="DiscoverViewController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ad9-cc-OSe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

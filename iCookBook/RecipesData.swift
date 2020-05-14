@@ -17,7 +17,7 @@ class RecipeData {
         let fillIngredients = "&fillIngredients=true"
         let addRecipeInformation = "&addRecipeInformation=true"
         let number = "&number=10"
-        let apiKey = "&apiKey=34cca14518a94763b022d99c68d8d6f2"
+        let apiKey = "&apiKey=6b543408e6e84daf9882f6652e201168"
         
         let finalURLString = baseURL + queryParam + instructionsRequired + fillIngredients + addRecipeInformation + number + apiKey   //Create recipe request URL to Spoonacular API
         return finalURLString
