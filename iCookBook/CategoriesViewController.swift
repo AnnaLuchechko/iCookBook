@@ -15,6 +15,12 @@ class CategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.searchController?.searchBar.tintColor = .white
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 
     @IBAction func categoriesButtonFilled(_ sender: UIButton) {

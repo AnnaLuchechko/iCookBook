@@ -55,14 +55,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6JM-bA-Xd5">
-                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.74715906379999997" blue="0.61320239310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.92156862750000001" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" red="0.0" green="0.74901960784313726" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhs-k0-eXV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -115,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-2664.375" y="1076.4084507042253"/>
         </scene>
-        <!--Item-->
+        <!--DiscoverNavigationController-->
         <scene sceneID="gIS-Uc-l7M">
             <objects>
-                <navigationController id="avv-zz-8hx" sceneMemberID="viewController">
+                <navigationController id="avv-zz-8hx" userLabel="DiscoverNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="xjX-Dz-pJK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ivW-ok-d4G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -133,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="-2661" y="-406"/>
         </scene>
-        <!--Item-->
+        <!--FavouritesNavigationController-->
         <scene sceneID="ugl-ef-0eg">
             <objects>
-                <navigationController id="eJv-js-WaU" sceneMemberID="viewController">
+                <navigationController id="eJv-js-WaU" userLabel="FavouritesNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="yt7-oh-bKn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="koY-N7-AMN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -159,14 +151,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-iw-0yO">
-                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.74715906379999997" blue="0.61320239310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.92156862750000001" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" red="0.0" green="0.74901960784313726" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8XY-K7-oMI">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -541,14 +525,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQa-mw-dCt">
-                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.74715906379999997" blue="0.61320239310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.92156862750000001" green="0.92941176469999998" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" red="0.0" green="0.74715906379999997" blue="0.61320239310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-JR-Xm3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -596,10 +572,24 @@
             </objects>
             <point key="canvasLocation" x="-3294" y="355"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P48-Ng-zaH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2x-1k-9vj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="DHw-8f-PT4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NWT-EW-Wn0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-3467" y="-1206"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZQa-4Y-1o2">
             <objects>
                 <tabBarController id="D7y-Uz-Tmf" customClass="TabBarController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tbG-Yd-yv0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="JC7-8y-gd4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -617,10 +607,10 @@
             </objects>
             <point key="canvasLocation" x="-2663" y="-1206"/>
         </scene>
-        <!--Item-->
+        <!--CategoriesNavigationController-->
         <scene sceneID="AX0-a7-haF">
             <objects>
-                <navigationController id="FZ6-by-uq9" sceneMemberID="viewController">
+                <navigationController id="FZ6-by-uq9" userLabel="CategoriesNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="48d-O4-KdZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YTo-Y2-eH4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

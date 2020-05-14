@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiscoverViewController: UIViewController {
+class DiscoverViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var recipesCollectionView: UICollectionView!
 
@@ -16,17 +16,34 @@ class DiscoverViewController: UIViewController {
     
     let recipeData = RecipeData()
     
+    var searchController = UISearchController()
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        loadRecipes(recipe: searchBar.text!)
+        searchController.searchBar.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        recipesCollectionView.delegate = self   //DiscoveViewController responsible for UICollectionViewDelegate functions
+        recipesCollectionView.delegate = self //DiscoveViewController responsible for UICollectionViewDelegate functions
         recipesCollectionView.dataSource = self //DiscoveViewController responsible for UICollectionViewDataSource functions
         
-        loadRecipes()
+        loadRecipes(recipe: "egg")
+
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "Search here..."
+        searchController.searchBar.delegate = self
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController?.searchBar.tintColor = .white
+        
     }
+
     
-    func loadRecipes() {
-        if let soonacularApiURL = URL(string: self.recipeData.spoonacoolarApiURL(query: "pizza")) {
+    func loadRecipes(recipe: String) {
+        if let soonacularApiURL = URL(string: self.recipeData.spoonacoolarApiURL(query: recipe)) {
             self.recipeData.fetchDataFromURL(from: soonacularApiURL) { (recipesData) in
                 if let data = recipesData {
                     DispatchQueue.main.async {  //Run asynchronous process on main thread
