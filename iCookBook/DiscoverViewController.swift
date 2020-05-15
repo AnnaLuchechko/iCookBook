@@ -30,7 +30,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         recipesCollectionView.delegate = self //DiscoveViewController responsible for UICollectionViewDelegate functions
         recipesCollectionView.dataSource = self //DiscoveViewController responsible for UICollectionViewDataSource functions
         
-        loadRecipes(recipe: "egg")
+        //loadRecipes(recipe: "egg")
 
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
@@ -40,6 +40,19 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        recipesCollectionView.addGestureRecognizer(tap)
+        recipesCollectionView.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+       if let indexPath = self.recipesCollectionView?.indexPathForItem(at: sender.location(in: self.recipesCollectionView)) {
+            let recipeViewController = storyboard?.instantiateViewController(identifier: "RecipeViewController") as? RecipeViewController
+            let imageURLString = "https://spoonacular.com/recipeImages/" + String((recipes?.results[indexPath.row].id)!) + "-556x370.jpg"
+            recipeViewController?.imageURL = imageURLString
+            recipeViewController?.recipes = self.recipes?.results[indexPath.row]
+            self.navigationController?.pushViewController(recipeViewController!, animated: true)
+        }
     }
 
     
@@ -110,16 +123,5 @@ extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewData
             }
         }
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let recipeViewController = storyboard?.instantiateViewController(identifier: "RecipeViewController") as? RecipeViewController
-        
-        
-        let imageURLString = "https://spoonacular.com/recipeImages/" + String((recipes?.results[indexPath.row].id)!) + "-556x370.jpg"
-        recipeViewController?.imageURL = imageURLString
-        recipeViewController?.recipes = self.recipes?.results[indexPath.row]
-        
-        self.navigationController?.pushViewController(recipeViewController!, animated: true)
     }
 }
