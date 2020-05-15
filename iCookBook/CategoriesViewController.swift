@@ -22,7 +22,7 @@ class CategoriesViewController: UIViewController {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.tintColor = .white
-
+        
     }
     
     func searchByRecipe(recipe: String) {

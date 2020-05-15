@@ -78,34 +78,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWv-DC-Zvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2663" y="355"/>
+            <point key="canvasLocation" x="-2664" y="374"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="Zlp-Wc-1TW">
             <objects>
                 <viewController storyboardIdentifier="RecipeViewController" id="FzU-xI-s7i" userLabel="Recipe View Controller" customClass="RecipeViewController" customModule="iCookBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1JI-nQ-Fnq">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="cab-FF-4B9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7H-ON-WYs">
-                                <rect key="frame" x="-11" y="44" width="331" height="475"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="ppb-NZ-oYl"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="b8t-8G-epK"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="2eP-98-cDa"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1fU-Ey-DQX"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="cdW-fg-zBl"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="sDa-g2-xJM"/>
+                    </scrollView>
                     <navigationItem key="navigationItem" id="Vxz-My-Dz9"/>
                     <connections>
-                        <outlet property="recipeScrollView" destination="C7H-ON-WYs" id="tKT-Iu-ccL"/>
+                        <outlet property="recipeNavigationItem" destination="Vxz-My-Dz9" id="eJB-5n-ScR"/>
+                        <outlet property="recipeScrollView" destination="cab-FF-4B9" id="DhO-Uc-WBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRn-fD-JEP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2664.375" y="1076.4084507042253"/>
+            <point key="canvasLocation" x="-2663" y="1144"/>
         </scene>
         <!--DiscoverNavigationController-->
         <scene sceneID="gIS-Uc-l7M">
@@ -170,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZW-Xy-vpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2019" y="355"/>
+            <point key="canvasLocation" x="-2019" y="344"/>
         </scene>
         <!--Categories-->
         <scene sceneID="Owu-aT-IhI">
@@ -181,7 +175,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3P-wM-AO7" userLabel="BREAKFAST">
-                                <rect key="frame" x="11" y="126" width="70" height="80"/>
+                                <rect key="frame" x="11" y="125" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <connections>
@@ -190,7 +184,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He6-HG-mEb" userLabel="LUNCH">
-                                <rect key="frame" x="125" y="126" width="70" height="80"/>
+                                <rect key="frame" x="125" y="125" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <connections>
@@ -199,7 +193,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY0-pX-6mO" userLabel="DINNER">
-                                <rect key="frame" x="239" y="126" width="70" height="80"/>
+                                <rect key="frame" x="239" y="125" width="70" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <connections>
@@ -208,7 +202,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APE-WR-e13" userLabel="MAINCOURSES">
-                                <rect key="frame" x="11" y="226" width="70" height="80"/>
+                                <rect key="frame" x="11" y="225" width="70" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <connections>
@@ -217,7 +211,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asS-5V-LDs" userLabel="SIDEDISHES">
-                                <rect key="frame" x="125" y="226" width="70" height="80"/>
+                                <rect key="frame" x="125" y="225" width="70" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <connections>
@@ -226,7 +220,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIc-bC-NpB" userLabel="DESSERTS">
-                                <rect key="frame" x="239" y="226" width="70" height="80"/>
+                                <rect key="frame" x="239" y="225" width="70" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <connections>
@@ -457,27 +451,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="breakfast1" translatesAutoresizingMaskIntoConstraints="NO" id="d32-wc-EhT">
-                                <rect key="frame" x="11" y="126" width="70" height="70"/>
+                                <rect key="frame" x="11" y="125" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lunch1" translatesAutoresizingMaskIntoConstraints="NO" id="UTy-Ta-aP5">
-                                <rect key="frame" x="125" y="126" width="70" height="70"/>
+                                <rect key="frame" x="125" y="125" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dinner1" translatesAutoresizingMaskIntoConstraints="NO" id="FpV-eK-3O7">
-                                <rect key="frame" x="237" y="126" width="70" height="70"/>
+                                <rect key="frame" x="237" y="125" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="desserts1" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-V9-6sv">
-                                <rect key="frame" x="239" y="226" width="70" height="70"/>
+                                <rect key="frame" x="239" y="225" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sidedishes1" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-mv-v22">
-                                <rect key="frame" x="125" y="226" width="70" height="70"/>
+                                <rect key="frame" x="125" y="225" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maincources1" translatesAutoresizingMaskIntoConstraints="NO" id="D7O-Q7-QYk">
-                                <rect key="frame" x="11" y="226" width="70" height="70"/>
+                                <rect key="frame" x="11" y="225" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snacks1" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-0S-Bjd">
@@ -493,15 +487,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soup1" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-FA-7Cd">
-                                <rect key="frame" x="11" y="426" width="70" height="70"/>
+                                <rect key="frame" x="11" y="426" width="70" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drinks1" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-Jb-0yW">
-                                <rect key="frame" x="125" y="426" width="70" height="70"/>
+                                <rect key="frame" x="125" y="426" width="70" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sauces1" translatesAutoresizingMaskIntoConstraints="NO" id="h7n-by-gIQ">
-                                <rect key="frame" x="239" y="426" width="70" height="70"/>
+                                <rect key="frame" x="239" y="426" width="70" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIU-oU-BUJ">
@@ -570,20 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhM-7b-z6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3294" y="355"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="P48-Ng-zaH">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u2x-1k-9vj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController id="DHw-8f-PT4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NWT-EW-Wn0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-3467" y="-1206"/>
+            <point key="canvasLocation" x="-3294" y="343"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZQa-4Y-1o2">

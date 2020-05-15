@@ -15,11 +15,15 @@ class RecipeViewController: UIViewController {
     //@IBOutlet weak var ingridientsLabel: UILabel!
     var imageURL: String = ""
     let recipesData = RecipeData()
-    var recipes: Recipes?
+    var recipes: Recipe?
+    
+    @IBOutlet weak var recipeNavigationItem: UINavigationItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        recipeNavigationItem.title = recipes?.title
         recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: 1000)
         
         let mainImage = UIImageView()
@@ -52,7 +56,7 @@ class RecipeViewController: UIViewController {
         
         //var labelOriginY = ingridientsLabel.frame.origin.y + ingridientsLabel.frame.size.height
         var labelOriginY = ingridientsLabel.frame.origin.y + ingridientsLabel.frame.size.height
-        let missedIngridients = recipes?.results[0].missedIngredients
+        let missedIngridients = recipes?.missedIngredients
         if let ingridients = missedIngridients {
             for ingridient in ingridients {
                 let textBackground = UIView()

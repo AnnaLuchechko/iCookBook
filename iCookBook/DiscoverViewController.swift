@@ -118,7 +118,7 @@ extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewData
         
         let imageURLString = "https://spoonacular.com/recipeImages/" + String((recipes?.results[indexPath.row].id)!) + "-556x370.jpg"
         recipeViewController?.imageURL = imageURLString
-        recipeViewController?.recipes = self.recipes
+        recipeViewController?.recipes = self.recipes?.results[indexPath.row]
         
         self.navigationController?.pushViewController(recipeViewController!, animated: true)
     }
