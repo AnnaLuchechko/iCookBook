@@ -24,6 +24,7 @@ class RecipeViewController: UIViewController {
         super.viewDidLoad()
         
         recipeNavigationItem.title = recipes?.title
+
         recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: 1000)
         
         let mainImage = UIImageView()
@@ -83,6 +84,17 @@ class RecipeViewController: UIViewController {
                 recipeScrollView.addSubview(textBackground)
             }
         }
+        
+        let preparationLabel = UILabel()
+        preparationLabel.text = "PREPARATION"
+        preparationLabel.frame.origin = CGPoint(x: 5, y: labelOriginY + 30)
+        preparationLabel.backgroundColor = .white
+        preparationLabel.layer.cornerRadius = 10
+        preparationLabel.textAlignment = .center
+        preparationLabel.textColor = .cyan
+        preparationLabel.layer.masksToBounds = true
+        preparationLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
+        recipeScrollView.addSubview(preparationLabel)
         
         
         
