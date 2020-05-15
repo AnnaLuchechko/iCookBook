@@ -26,6 +26,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        recipesCollectionView.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         recipesCollectionView.delegate = self //DiscoveViewController responsible for UICollectionViewDelegate functions
         recipesCollectionView.dataSource = self //DiscoveViewController responsible for UICollectionViewDataSource functions
         
@@ -33,12 +34,11 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
 
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search here..."
-
+        searchController.searchBar.placeholder = "Search"
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController?.searchBar.tintColor = .white
+        navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         
     }
 

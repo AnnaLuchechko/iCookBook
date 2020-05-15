@@ -23,14 +23,16 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        recipeNavigationItem.title = recipes?.title
+        recipeNavigationItem.title = recipes?.title.uppercased()
+        navigationController?.navigationBar.topItem?.title = " "
+        
 
         recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: 1000)
         
         let mainImage = UIImageView()
         mainImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
         mainImage.contentMode = .scaleAspectFill
-        recipeScrollView.backgroundColor = .gray
+        recipeScrollView.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         recipeScrollView.addSubview(mainImage)
 
         let image = URL(string: imageURL)
@@ -47,10 +49,10 @@ class RecipeViewController: UIViewController {
         let ingridientsLabel = UILabel()
         ingridientsLabel.text = "INGRIDIENTS"
         ingridientsLabel.frame.origin = CGPoint(x: 5, y: mainImage.frame.origin.y + mainImage.frame.size.height)
-        ingridientsLabel.backgroundColor = .white
+        ingridientsLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
         ingridientsLabel.layer.cornerRadius = 10
         ingridientsLabel.textAlignment = .center
-        ingridientsLabel.textColor = .cyan
+        ingridientsLabel.textColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         ingridientsLabel.layer.masksToBounds = true
         ingridientsLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
         recipeScrollView.addSubview(ingridientsLabel)
@@ -88,10 +90,10 @@ class RecipeViewController: UIViewController {
         let preparationLabel = UILabel()
         preparationLabel.text = "PREPARATION"
         preparationLabel.frame.origin = CGPoint(x: 5, y: labelOriginY + 30)
-        preparationLabel.backgroundColor = .white
+        preparationLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
         preparationLabel.layer.cornerRadius = 10
         preparationLabel.textAlignment = .center
-        preparationLabel.textColor = .cyan
+        preparationLabel.textColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         preparationLabel.layer.masksToBounds = true
         preparationLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
         recipeScrollView.addSubview(preparationLabel)
