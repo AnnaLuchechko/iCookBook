@@ -96,7 +96,33 @@ class RecipeViewController: UIViewController {
         preparationLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
         recipeScrollView.addSubview(preparationLabel)
         
-        
+        let preparationSteps = recipes?.analyzedInstructions[0].steps
+        if let steps = preparationSteps {
+            for step in steps {
+                let textBackground = UIView()
+                textBackground.frame.size.width = self.view.frame.size.width - 10
+                textBackground.frame.size.height = 30
+                textBackground.frame.origin.x = 5
+                textBackground.frame.origin.y = labelOriginY
+                labelOriginY += 30
+                //textBackground.backgroundColor = .cyan
+                
+                let label = UILabel()
+                label.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width - self.view.frame.size.width/3 - 5, height: 30)
+                label.text = step.name
+                label.textAlignment = .left
+                
+                let countLabel = UILabel()
+                countLabel.frame = CGRect(x: label.frame.size.width, y: 0, width: self.view.frame.size.width/3 - 5, height: 30)
+                let countLabelText = String(format: "%.1f", ingridient.amount) + " " + ingridient.unitShort
+                countLabel.text = countLabelText
+                countLabel.textAlignment = .right
+                
+                textBackground.addSubview(label)
+                textBackground.addSubview(countLabel)
+                recipeScrollView.addSubview(textBackground)
+            }
+        }
         
     }
 
