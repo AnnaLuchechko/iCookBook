@@ -25,6 +25,22 @@ class CategoriesViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let categoriesUnfilledImagesArray = ["breakfast1", "lunch1", "dinner1",
+                                                 "maincources1", "sidedishes1", "desserts1",
+                                                 "snacks1", "salads1", "sweets1",
+                                                 "soup1", "drinks1", "sauces1"]
+        
+        for index in categoriesUnfilledImagesArray.indices {
+            let unfilledImageCategories = UIImage(named: categoriesUnfilledImagesArray[index])
+            imageViews[index].image = unfilledImageCategories
+            categoryButtonLabels[index].textColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
+        }
+        
+    }
+    
     func searchByRecipe(recipe: String) {
         let discoverViewController = storyboard?.instantiateViewController(identifier: "discoverView") as? DiscoverViewController
         self.navigationController?.pushViewController(discoverViewController!, animated: true)
@@ -33,7 +49,7 @@ class CategoriesViewController: UIViewController {
 
     @IBAction func categoriesButtonFilled(_ sender: UIButton) {
         let categoriesFilledImagesArray = ["breakfast", "lunch", "dinner",
-                                           "maincources", "sidedishes", "desserts",
+                                           "main course", "side dishes", "desserts",
                                            "snacks", "salads", "sweets",
                                            "soup", "drinks", "sauces"]
         let buttonLabelColor = [UIColor(red: 0.76, green: 0.49, blue: 0.28, alpha: 1.00),

@@ -276,6 +276,7 @@
                                 <connections>
                                     <action selector="categoriesButtonFilled:" destination="zO1-zG-iY2" eventType="touchDown" id="ZKo-gr-Ffc"/>
                                     <action selector="categoriesButtonUnfilled:" destination="zO1-zG-iY2" eventType="primaryActionTriggered" id="3zQ-Jy-sVb"/>
+                                    <action selector="categoriesTouchUp:" destination="zO1-zG-iY2" eventType="touchUpInside" id="Z06-TI-2Yd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-kJ-eGp" userLabel="SWEETS">
