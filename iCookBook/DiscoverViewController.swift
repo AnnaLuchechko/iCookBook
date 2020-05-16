@@ -50,7 +50,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
             let recipeViewController = storyboard?.instantiateViewController(identifier: "RecipeViewController") as? RecipeViewController
             let imageURLString = "https://spoonacular.com/recipeImages/" + String((recipes?.results[indexPath.row].id)!) + "-556x370.jpg"
             recipeViewController?.imageURL = imageURLString
-            recipeViewController?.recipes = self.recipes?.results[indexPath.row]
+            recipeViewController?.recipe = self.recipes?.results[indexPath.row]
             self.navigationController?.pushViewController(recipeViewController!, animated: true)
         }
     }

@@ -7,36 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class RecipeViewController: UIViewController {
 
+    var imageURL: String = ""
+    let recipesData = RecipeData()
+    var recipe: Recipe?
     
+    @IBOutlet weak var recipeNavigationItem: UINavigationItem!
+    @IBOutlet weak var recipeScrollView: UIScrollView!
     @IBOutlet weak var favouriteButtonReference: UIButton!
     
     @IBAction func favouriteButton(_ sender: UIButton) {
-        if (checkIfIsFavouriteRecipe(id: String(recipes?.id ?? 0))) {
-            removeRecipeFromFavourites(id: String(recipes?.id ?? 0))
+        if (recipesData.checkIfIsFavouriteRecipe(id: String(recipe?.id ?? 0))) {
+            recipesData.removeRecipeFromFavourites(id: String(recipe?.id ?? 0))
             favouriteButtonReference.setImage(UIImage(named: "heart"), for: .normal)
         } else {
-            addRecipeToFavourites(id: String(recipes?.id ?? 0))
+            recipesData.addRecipeToFavourites(id: String(recipe?.id ?? 0), recipe: self.recipe!)
             favouriteButtonReference.setImage(UIImage(named: "heartfilled"), for: .normal)
         }
     }
     
-    let favouritesKey = "favourites"
-    
-
-    @IBOutlet weak var recipeScrollView: UIScrollView!
-    var imageURL: String = ""
-    let recipesData = RecipeData()
-    var recipes: Recipe?
-    
-    @IBOutlet weak var recipeNavigationItem: UINavigationItem!
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        if (checkIfIsFavouriteRecipe(id: String(recipes?.id ?? 0))) {
+        if (recipesData.checkIfIsFavouriteRecipe(id: String(recipe?.id ?? 0))) {
             favouriteButtonReference.setImage(UIImage(named: "heartfilled"), for: .normal)
         } else {
             favouriteButtonReference.setImage(UIImage(named: "heart"), for: .normal)
@@ -46,7 +42,7 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        recipeNavigationItem.title = recipes?.title.uppercased()
+        recipeNavigationItem.title = recipe?.title.uppercased()
         navigationController?.navigationBar.topItem?.title = " "
         
         let mainImage = UIImageView()
@@ -79,7 +75,7 @@ class RecipeViewController: UIViewController {
         
         //var labelOriginY = ingridientsLabel.frame.origin.y + ingridientsLabel.frame.size.height
         var labelOriginY = ingridientsLabel.frame.origin.y + ingridientsLabel.frame.size.height
-        let missedIngridients = recipes?.missedIngredients
+        let missedIngridients = recipe?.missedIngredients
         if let ingridients = missedIngridients {
             for ingridient in ingridients {
                 let textBackground = UIView()
@@ -125,7 +121,7 @@ class RecipeViewController: UIViewController {
         
         labelOriginY = preparationLabel.frame.origin.y + preparationLabel.frame.size.height + 2
         
-        let preparationSteps = recipes?.analyzedInstructions[0].steps
+        let preparationSteps = recipe?.analyzedInstructions[0].steps
         if let steps = preparationSteps {
             for step in steps {
                 let textBackground = UIView()
@@ -160,36 +156,4 @@ class RecipeViewController: UIViewController {
         recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: labelOriginY + 2)
     }
     
-    func getFavouritesRecipes() -> [String]? {
-        let favouritesRecipeIds = UserDefaults.standard.stringArray(forKey: favouritesKey)
-        return favouritesRecipeIds
-    }
-    
-    func saveFavouritesRecipes(ids: [String]) {
-        UserDefaults.standard.set(ids, forKey: favouritesKey)
-    }
-    
-    func checkIfIsFavouriteRecipe(id: String) -> Bool {
-        let favouritesRecipeIds = getFavouritesRecipes() ?? [String]()
-        for recipe in favouritesRecipeIds {
-            if (recipe == id) {
-                return true
-            }
-        }
-        return false
-    }
-        
-    func addRecipeToFavourites(id: String) {
-        var favouritesRecipeIds = getFavouritesRecipes() ?? [String]()
-        favouritesRecipeIds.append(id)
-        saveFavouritesRecipes(ids: favouritesRecipeIds)
-    }
-    
-    func removeRecipeFromFavourites(id: String) {
-        var favouritesRecipeIds = getFavouritesRecipes() ?? [String]()
-        favouritesRecipeIds = favouritesRecipeIds.filter{ $0 != id } //New array filtered by any element of array equals id, if yes - remove that id and save this array
-        saveFavouritesRecipes(ids: favouritesRecipeIds)
-        
-    }
-
 }
