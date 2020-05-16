@@ -48,8 +48,6 @@ class RecipeViewController: UIViewController {
         
         recipeNavigationItem.title = recipes?.title.uppercased()
         navigationController?.navigationBar.topItem?.title = " "
-
-        recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: 1000)
         
         let mainImage = UIImageView()
         mainImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
@@ -70,7 +68,7 @@ class RecipeViewController: UIViewController {
     
         let ingridientsLabel = UILabel()
         ingridientsLabel.text = "INGRIDIENTS"
-        ingridientsLabel.frame.origin = CGPoint(x: 5, y: mainImage.frame.origin.y + mainImage.frame.size.height)
+        ingridientsLabel.frame.origin = CGPoint(x: 5, y: mainImage.frame.origin.y + mainImage.frame.size.height + 2)
         ingridientsLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
         ingridientsLabel.layer.cornerRadius = 10
         ingridientsLabel.textAlignment = .center
@@ -116,7 +114,7 @@ class RecipeViewController: UIViewController {
         
         let preparationLabel = UILabel()
         preparationLabel.text = "PREPARATION"
-        preparationLabel.frame.origin = CGPoint(x: 5, y: labelOriginY + 30)
+        preparationLabel.frame.origin = CGPoint(x: 5, y: labelOriginY + 5)
         preparationLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
         preparationLabel.layer.cornerRadius = 10
         preparationLabel.textAlignment = .center
@@ -125,26 +123,29 @@ class RecipeViewController: UIViewController {
         preparationLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
         recipeScrollView.addSubview(preparationLabel)
         
-        labelOriginY = preparationLabel.frame.origin.y + preparationLabel.frame.size.height
+        labelOriginY = preparationLabel.frame.origin.y + preparationLabel.frame.size.height + 2
         
         let preparationSteps = recipes?.analyzedInstructions[0].steps
         if let steps = preparationSteps {
             for step in steps {
                 let textBackground = UIView()
                 textBackground.frame.size.width = self.view.frame.size.width - 10
-                textBackground.frame.size.height = 60
+                textBackground.frame.size.height = 30
                 textBackground.frame.origin.x = 5
                 textBackground.frame.origin.y = labelOriginY
-                labelOriginY += 30
-                //textBackground.backgroundColor = .cyan
+                labelOriginY += 32
+                textBackground.backgroundColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.00)
+                textBackground.layer.masksToBounds = true
+                textBackground.layer.cornerRadius = 10
                 
+                                
                 let label = UILabel()
-                label.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width / 5, height: 30)
+                label.frame = CGRect(x: 5, y: 0, width: self.view.frame.size.width / 16, height: 30)
                 label.text = String(step.number)
                 label.textAlignment = .left
                 
                 let countLabel = UILabel()
-                countLabel.frame = CGRect(x: label.frame.size.width, y: 0, width: self.view.frame.size.width - self.view.frame.size.width / 5, height: 30)
+                countLabel.frame = CGRect(x: label.frame.size.width, y: 0, width: self.view.frame.size.width - self.view.frame.size.width / 16, height: 30)
                 let countLabelText = step.step
                 countLabel.text = countLabelText
                 countLabel.textAlignment = .left
@@ -156,6 +157,7 @@ class RecipeViewController: UIViewController {
             }
         }
         
+        recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: labelOriginY + 2)
     }
     
     func getFavouritesRecipes() -> [String]? {
@@ -170,7 +172,6 @@ class RecipeViewController: UIViewController {
     func checkIfIsFavouriteRecipe(id: String) -> Bool {
         let favouritesRecipeIds = getFavouritesRecipes() ?? [String]()
         for recipe in favouritesRecipeIds {
-            print(recipe)
             if (recipe == id) {
                 return true
             }
