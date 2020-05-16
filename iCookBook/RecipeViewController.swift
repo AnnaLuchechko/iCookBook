@@ -92,6 +92,11 @@ class RecipeViewController: UIViewController {
                 labelOriginY += 30
                 //textBackground.backgroundColor = .cyan
                 
+                let bottomBorder = UIView()
+                bottomBorder.frame = CGRect(x: 0, y: textBackground.frame.size.height, width: textBackground.frame.size.width, height: 1)
+                bottomBorder.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
+                textBackground.addSubview(bottomBorder) //Add lines for each ingredient
+                
                 let label = UILabel()
                 label.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width - self.view.frame.size.width/3 - 5, height: 30)
                 label.text = ingridient.name
