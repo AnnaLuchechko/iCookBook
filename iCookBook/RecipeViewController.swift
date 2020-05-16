@@ -15,11 +15,9 @@ class RecipeViewController: UIViewController {
     
     @IBAction func favouriteButton(_ sender: UIButton) {
         if (checkIfIsFavouriteRecipe(id: String(recipes?.id ?? 0))) {
-            print("recipe in favourites")
             removeRecipeFromFavourites(id: String(recipes?.id ?? 0))
             favouriteButtonReference.setImage(UIImage(named: "heart"), for: .normal)
         } else {
-            print("recipe not in favourites")
             addRecipeToFavourites(id: String(recipes?.id ?? 0))
             favouriteButtonReference.setImage(UIImage(named: "heartfilled"), for: .normal)
         }
@@ -39,10 +37,8 @@ class RecipeViewController: UIViewController {
         super.viewDidAppear(true)
         
         if (checkIfIsFavouriteRecipe(id: String(recipes?.id ?? 0))) {
-            print("recipe in favourites from DidAppear")
             favouriteButtonReference.setImage(UIImage(named: "heartfilled"), for: .normal)
         } else {
-            print("recipe not in favourites from DidAppear")
             favouriteButtonReference.setImage(UIImage(named: "heart"), for: .normal)
         }
     }
