@@ -10,22 +10,48 @@ import UIKit
 
 class RecipeViewController: UIViewController {
 
-    //@IBOutlet weak var recipeImage: UIImageView!
+    
+    @IBOutlet weak var favouriteButtonReference: UIButton!
+    
+    @IBAction func favouriteButton(_ sender: UIButton) {
+        if (checkIfIsFavouriteRecipe(id: String(recipes?.id ?? 0))) {
+            print("recipe in favourites")
+            removeRecipeFromFavourites(id: String(recipes?.id ?? 0))
+            favouriteButtonReference.setImage(UIImage(named: "heart"), for: .normal)
+        } else {
+            print("recipe not in favourites")
+            addRecipeToFavourites(id: String(recipes?.id ?? 0))
+            favouriteButtonReference.setImage(UIImage(named: "heartfilled"), for: .normal)
+        }
+    }
+    
+    let favouritesKey = "favourites"
+    
+
     @IBOutlet weak var recipeScrollView: UIScrollView!
-    //@IBOutlet weak var ingridientsLabel: UILabel!
     var imageURL: String = ""
     let recipesData = RecipeData()
     var recipes: Recipe?
     
     @IBOutlet weak var recipeNavigationItem: UINavigationItem!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if (checkIfIsFavouriteRecipe(id: String(recipes?.id ?? 0))) {
+            print("recipe in favourites from DidAppear")
+            favouriteButtonReference.setImage(UIImage(named: "heartfilled"), for: .normal)
+        } else {
+            print("recipe not in favourites from DidAppear")
+            favouriteButtonReference.setImage(UIImage(named: "heart"), for: .normal)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         recipeNavigationItem.title = recipes?.title.uppercased()
         navigationController?.navigationBar.topItem?.title = " "
-        
 
         recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: 1000)
         
@@ -45,7 +71,7 @@ class RecipeViewController: UIViewController {
                 print("Error loading image")
             }
         }
-        
+    
         let ingridientsLabel = UILabel()
         ingridientsLabel.text = "INGRIDIENTS"
         ingridientsLabel.frame.origin = CGPoint(x: 5, y: mainImage.frame.origin.y + mainImage.frame.size.height)
@@ -128,6 +154,39 @@ class RecipeViewController: UIViewController {
                 recipeScrollView.addSubview(textBackground)
             }
         }
+        
+    }
+    
+    func getFavouritesRecipes() -> [String]? {
+        let favouritesRecipeIds = UserDefaults.standard.stringArray(forKey: favouritesKey)
+        return favouritesRecipeIds
+    }
+    
+    func saveFavouritesRecipes(ids: [String]) {
+        UserDefaults.standard.set(ids, forKey: favouritesKey)
+    }
+    
+    func checkIfIsFavouriteRecipe(id: String) -> Bool {
+        let favouritesRecipeIds = getFavouritesRecipes() ?? [String]()
+        for recipe in favouritesRecipeIds {
+            print(recipe)
+            if (recipe == id) {
+                return true
+            }
+        }
+        return false
+    }
+        
+    func addRecipeToFavourites(id: String) {
+        var favouritesRecipeIds = getFavouritesRecipes() ?? [String]()
+        favouritesRecipeIds.append(id)
+        saveFavouritesRecipes(ids: favouritesRecipeIds)
+    }
+    
+    func removeRecipeFromFavourites(id: String) {
+        var favouritesRecipeIds = getFavouritesRecipes() ?? [String]()
+        favouritesRecipeIds = favouritesRecipeIds.filter{ $0 != id } //New array filtered by any element of array equals id, if yes - remove that id and save this array
+        saveFavouritesRecipes(ids: favouritesRecipeIds)
         
     }
 
