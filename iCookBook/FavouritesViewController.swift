@@ -55,16 +55,16 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = self.view.frame.size.width
-        let cellWidth = screenWidth
+        let cellWidth = screenWidth - 8
         return CGSize(width: cellWidth, height: 80)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 5
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,7 +75,7 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favouritesViewCell", for: indexPath) as! FavouritesCollectionViewCell
         //Each cell in collection view
-        
+
         //let screenWidth = self.view.frame.size.width
         //let cellWidth = screenWidth
         //cell.favouritesImageView.frame.size.width = cellWidth
@@ -83,6 +83,8 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
         //cell.favouritesLabelView.frame.origin.y = cell.recipeCellImageView.frame.origin.y + cellWidth //Label Y = Origin Y + Image size Y
         cell.favouritesImageView.layer.cornerRadius = 10    //Round bounds
         cell.favouritesImageView.layer.masksToBounds = true
+        cell.favouritesImageView.frame.origin.y = (cell.frame.size.height - cell.favouritesImageView.frame.size.height) / 2
+        cell.favouritesImageView.frame.origin.x = cell.favouritesImageView.frame.origin.x - 2
         cell.contentView.backgroundColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.00)
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.masksToBounds = true
