@@ -128,23 +128,27 @@ class RecipeViewController: UIViewController {
                 textBackground.frame.size.height = 30
                 textBackground.frame.origin.x = 5
                 textBackground.frame.origin.y = labelOriginY
-                labelOriginY += 32
                 textBackground.backgroundColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.00)
                 textBackground.layer.masksToBounds = true
                 textBackground.layer.cornerRadius = 10
                 
                                 
                 let label = UILabel()
-                label.frame = CGRect(x: 5, y: 0, width: self.view.frame.size.width / 16, height: 30)
+                label.frame = CGRect(x: 5, y: 0, width: self.view.frame.size.width / 14, height: 30)
                 label.text = String(step.number)
                 label.textAlignment = .left
                 
                 let countLabel = UILabel()
-                countLabel.frame = CGRect(x: label.frame.size.width, y: 0, width: self.view.frame.size.width - self.view.frame.size.width / 16, height: 30)
+                countLabel.frame = CGRect(x: label.frame.size.width, y: 0, width: self.view.frame.size.width - self.view.frame.size.width / 10, height: 30)
                 let countLabelText = step.step
                 countLabel.text = countLabelText
                 countLabel.textAlignment = .left
-                countLabel.numberOfLines = 2
+                countLabel.numberOfLines = countLabel.maxNumberOfLines
+                countLabel.frame.size.height = countLabel.frame.size.height * CGFloat(countLabel.maxNumberOfLines)
+                label.frame.size.height = label.frame.size.height * CGFloat(countLabel.maxNumberOfLines)
+                textBackground.frame.size.height = countLabel.frame.size.height
+                labelOriginY += textBackground.frame.size.height + 2
+                
                 
                 textBackground.addSubview(label)
                 textBackground.addSubview(countLabel)
@@ -155,4 +159,14 @@ class RecipeViewController: UIViewController {
         recipeScrollView.contentSize = CGSize(width: self.view.frame.width, height: labelOriginY + 2)
     }
     
+}
+
+extension UILabel {
+    var maxNumberOfLines: Int {
+        let maxSize = CGSize(width: frame.size.width, height: CGFloat(MAXFLOAT))
+        let text = (self.text ?? "") as NSString
+        let textHeight = text.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: [.font: font!], context: nil).height
+        let lineHeight = font.lineHeight
+        return Int(ceil(textHeight / lineHeight))
+    }
 }
