@@ -23,6 +23,10 @@ class FavouritesViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         
+        let title = UIImage(named: "title.png")  //Title logo
+        let imageView = UIImageView(image:title)
+        self.navigationItem.titleView = imageView
+        
         favouritesCollectionView.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         favouritesCollectionView.delegate = self //FavouritesViewController responsible for UICollectionViewDelegate functions
         favouritesCollectionView.dataSource = self //FavouritesViewController responsible for UICollectionViewDataSource functions
@@ -46,7 +50,7 @@ class FavouritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         favouriteRecipes = recipesData.getRecipeData()
-               self.favouritesCollectionView.reloadData()
+               self.favouritesCollectionView.reloadData() 
     }
 
 }

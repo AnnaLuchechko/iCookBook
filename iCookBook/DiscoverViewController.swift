@@ -43,6 +43,10 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         
+        let title = UIImage(named: "title.png")  //Title logo
+        let imageView = UIImageView(image:title)
+        self.navigationItem.titleView = imageView
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         recipesCollectionView.addGestureRecognizer(tap)
         recipesCollectionView.isUserInteractionEnabled = true //
