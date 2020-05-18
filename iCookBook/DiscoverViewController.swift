@@ -34,7 +34,10 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
 
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Search"
+       
+        searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string:"Search.....", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+        searchController.searchBar.searchTextField.textColor = UIColor.white
+        //searchController.searchBar.placeholder = "Search!!!"
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -42,7 +45,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         recipesCollectionView.addGestureRecognizer(tap)
-        recipesCollectionView.isUserInteractionEnabled = true
+        recipesCollectionView.isUserInteractionEnabled = true //
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {

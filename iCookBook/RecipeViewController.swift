@@ -73,7 +73,6 @@ class RecipeViewController: UIViewController {
         ingridientsLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
         recipeScrollView.addSubview(ingridientsLabel)
         
-        //var labelOriginY = ingridientsLabel.frame.origin.y + ingridientsLabel.frame.size.height
         var labelOriginY = ingridientsLabel.frame.origin.y + ingridientsLabel.frame.size.height
         let missedIngridients = recipe?.missedIngredients
         if let ingridients = missedIngridients {
