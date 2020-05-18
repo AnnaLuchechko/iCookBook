@@ -18,12 +18,12 @@ class FavouritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let searchController = UISearchController(searchResultsController: nil)
+        let searchController = UISearchController(searchResultsController: nil) //Design settings for SearchBar
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         
-        let title = UIImage(named: "title.png")  //Title logo
+        let title = UIImage(named: "title.png")  //Title logo "iCookBook"
         let imageView = UIImageView(image:title)
         self.navigationItem.titleView = imageView
         
@@ -50,12 +50,12 @@ class FavouritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         favouriteRecipes = recipesData.getRecipeData()
-               self.favouritesCollectionView.reloadData() 
+               self.favouritesCollectionView.reloadData()   //Refresh data while delete recipe from favourites
     }
 
 }
 
-extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {  //Settings of CollectionView
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = self.view.frame.size.width
@@ -80,11 +80,6 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favouritesViewCell", for: indexPath) as! FavouritesCollectionViewCell
         //Each cell in collection view
 
-        //let screenWidth = self.view.frame.size.width
-        //let cellWidth = screenWidth
-        //cell.favouritesImageView.frame.size.width = cellWidth
-        //cell.favouritesImageView.frame.size.height = cellWidth
-        //cell.favouritesLabelView.frame.origin.y = cell.recipeCellImageView.frame.origin.y + cellWidth //Label Y = Origin Y + Image size Y
         cell.favouritesImageView.layer.cornerRadius = 10    //Round bounds
         cell.favouritesImageView.layer.masksToBounds = true
         cell.favouritesImageView.frame.origin.y = (cell.frame.size.height - cell.favouritesImageView.frame.size.height) / 2

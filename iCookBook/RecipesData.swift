@@ -19,7 +19,7 @@ class RecipeData {
         let fillIngredients = "&fillIngredients=true"
         let addRecipeInformation = "&addRecipeInformation=true"
         let number = "&number=10"
-        let apiKey = "&apiKey=5f6b8d3956724e258fb9eb8709656cd3"
+        let apiKey = "&apiKey=34cca14518a94763b022d99c68d8d6f2"
         //or 34cca14518a94763b022d99c68d8d6f2
         //or 6b543408e6e84daf9882f6652e201168
         //or 5f6b8d3956724e258fb9eb8709656cd3

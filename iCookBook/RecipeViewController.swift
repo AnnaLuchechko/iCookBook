@@ -42,16 +42,16 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        recipeNavigationItem.title = recipe?.title.uppercased()
+        recipeNavigationItem.title = recipe?.title.uppercased() //Recipe title
         navigationController?.navigationBar.topItem?.title = " "
         
-        let mainImage = UIImageView()
+        let mainImage = UIImageView()   //Recipe image
         mainImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
         mainImage.contentMode = .scaleAspectFill
         recipeScrollView.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         recipeScrollView.addSubview(mainImage)
 
-        let image = URL(string: imageURL)
+        let image = URL(string: imageURL)   //Get image from API for recipe
         self.recipesData.fetchDataFromURL(from: (image)!) { (imageData) in
             if let data = imageData {
                 DispatchQueue.main.async {
@@ -62,7 +62,7 @@ class RecipeViewController: UIViewController {
             }
         }
     
-        let ingridientsLabel = UILabel()
+        let ingridientsLabel = UILabel()    //Ingredients settings for recipe
         ingridientsLabel.text = "INGRIDIENTS"
         ingridientsLabel.frame.origin = CGPoint(x: 5, y: mainImage.frame.origin.y + mainImage.frame.size.height + 2)
         ingridientsLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
@@ -107,7 +107,7 @@ class RecipeViewController: UIViewController {
             }
         }
         
-        let preparationLabel = UILabel()
+        let preparationLabel = UILabel()    //Prearation settings for recipe
         preparationLabel.text = "PREPARATION"
         preparationLabel.frame.origin = CGPoint(x: 5, y: labelOriginY + 5)
         preparationLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
@@ -161,7 +161,7 @@ class RecipeViewController: UIViewController {
     
 }
 
-extension UILabel {
+extension UILabel { //Extend UILabel code to get needed number of lines to display whole text
     var maxNumberOfLines: Int {
         let maxSize = CGSize(width: frame.size.width, height: CGFloat(MAXFLOAT))
         let text = (self.text ?? "") as NSString

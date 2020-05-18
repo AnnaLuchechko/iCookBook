@@ -43,8 +43,8 @@ class CategoriesViewController: UIViewController {
     }
     
     func searchByRecipe(recipe: String) {
-        let discoverViewController = storyboard?.instantiateViewController(identifier: "discoverView") as? DiscoverViewController
-        discoverViewController?.shownFromCategories = true
+        let discoverViewController = storyboard?.instantiateViewController(identifier: "discoverView") as? DiscoverViewController //Instantiate DiscoverViewController
+        discoverViewController?.shownFromCategories = true // change bool variable to let DiscoverViewController know that we came from here
         self.navigationController?.show(discoverViewController!, sender: self)
         discoverViewController?.loadRecipes(recipe: recipe)
     }
@@ -69,9 +69,7 @@ class CategoriesViewController: UIViewController {
         
         let categoriesFilledImage = UIImage(named: categoriesFilledImagesArray[sender.tag])
         imageViews[sender.tag].image = categoriesFilledImage
-        
         categoryButtonLabels[sender.tag].textColor = buttonLabelColor[sender.tag]
-        
         searchByRecipe(recipe: categoriesFilledImagesArray[sender.tag])
     }
     
@@ -83,7 +81,6 @@ class CategoriesViewController: UIViewController {
         
         let unfilledImageCategories = UIImage(named: categoriesUnfilledImagesArray[sender.tag])
         imageViews[sender.tag].image = unfilledImageCategories
-    
         categoryButtonLabels[sender.tag].textColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
     }
     

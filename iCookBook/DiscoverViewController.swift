@@ -14,7 +14,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
 
     var recipes: Recipes?
     
-    var shownFromCategories = false
+    var shownFromCategories = false //Bool: true if we go from categories, false - we go from discover
     
     let recipeData = RecipeData()
     
@@ -27,7 +27,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        shownFromCategories = false
+        shownFromCategories = false //we go out from discover
     }
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         recipesCollectionView.dataSource = self //DiscoveViewController responsible for UICollectionViewDataSource functions
         
         if(!shownFromCategories) {
-            loadRecipes(recipe: "egg")
+            loadRecipes(recipe: "egg") //we go to discover
         }
 
         searchController.searchBar.delegate = self
@@ -58,7 +58,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         recipesCollectionView.isUserInteractionEnabled = true //
     }
     
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {    //Tap on Recipe in DiscoverView
        if let indexPath = self.recipesCollectionView?.indexPathForItem(at: sender.location(in: self.recipesCollectionView)) {
             let recipeViewController = storyboard?.instantiateViewController(identifier: "RecipeViewController") as? RecipeViewController
             let imageURLString = "https://spoonacular.com/recipeImages/" + String((recipes?.results[indexPath.row].id)!) + "-556x370.jpg"
@@ -87,7 +87,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
     
 }
 
-extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {    //Settings of CollectionView
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = self.view.frame.size.width
