@@ -43,7 +43,7 @@ class FavouritesViewController: UIViewController {
             let imageURLString = "https://spoonacular.com/recipeImages/" + String(favouriteRecipes[indexPath.row].id) + "-556x370.jpg"
             recipeViewController?.imageURL = imageURLString
             recipeViewController?.recipe = self.favouriteRecipes[indexPath.row]
-            self.navigationController?.pushViewController(recipeViewController!, animated: true)
+            self.navigationController?.show(recipeViewController!, sender: self)
         }
     }
     

@@ -12,5 +12,5 @@ class FavouritesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var favouritesImageView: UIImageView!
     @IBOutlet weak var favouritesLabelView: UILabel!
-    
+    //FavouritesViewController
 }

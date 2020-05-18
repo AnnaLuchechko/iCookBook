@@ -12,4 +12,5 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var recipeCellImageView: UIImageView!
     @IBOutlet weak var recipeCellLabel: UILabel!
+    //DiscoverViewController
 }

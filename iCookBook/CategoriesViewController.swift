@@ -16,14 +16,12 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.searchController?.searchBar.tintColor = .white
-        
-        let searchController = UISearchController(searchResultsController: nil)
+        let searchController = UISearchController(searchResultsController: nil) //Design settings for SearchBar
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
         
-        let title = UIImage(named: "title.png")  //Title logo
+        let title = UIImage(named: "title.png")  //Title logo "iCookBook"
         let imageView = UIImageView(image:title)
         self.navigationItem.titleView = imageView
     }
@@ -46,7 +44,8 @@ class CategoriesViewController: UIViewController {
     
     func searchByRecipe(recipe: String) {
         let discoverViewController = storyboard?.instantiateViewController(identifier: "discoverView") as? DiscoverViewController
-        self.navigationController?.pushViewController(discoverViewController!, animated: true)
+        discoverViewController?.shownFromCategories = true
+        self.navigationController?.show(discoverViewController!, sender: self)
         discoverViewController?.loadRecipes(recipe: recipe)
     }
 

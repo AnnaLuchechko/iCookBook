@@ -14,13 +14,20 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
 
     var recipes: Recipes?
     
+    var shownFromCategories = false
+    
     let recipeData = RecipeData()
     
-    var searchController = UISearchController()
+    let searchController = UISearchController()
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         loadRecipes(recipe: searchBar.text!)
         searchController.searchBar.endEditing(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        shownFromCategories = false
     }
     
     override func viewDidLoad() {
@@ -30,14 +37,13 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         recipesCollectionView.delegate = self //DiscoveViewController responsible for UICollectionViewDelegate functions
         recipesCollectionView.dataSource = self //DiscoveViewController responsible for UICollectionViewDataSource functions
         
-        //loadRecipes(recipe: "egg")
+        if(!shownFromCategories) {
+            loadRecipes(recipe: "egg")
+        }
 
-        searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
-       
-        searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string:"Search.....", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+        searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string:"Search", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
         searchController.searchBar.searchTextField.textColor = UIColor.white
-        //searchController.searchBar.placeholder = "Search!!!"
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -58,11 +64,10 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
             let imageURLString = "https://spoonacular.com/recipeImages/" + String((recipes?.results[indexPath.row].id)!) + "-556x370.jpg"
             recipeViewController?.imageURL = imageURLString
             recipeViewController?.recipe = self.recipes?.results[indexPath.row]
-            self.navigationController?.pushViewController(recipeViewController!, animated: true)
+            self.navigationController?.show(recipeViewController!, sender: self)
         }
     }
 
-    
     func loadRecipes(recipe: String) {
         if let soonacularApiURL = URL(string: self.recipeData.spoonacoolarApiURL(query: recipe)) {
             self.recipeData.fetchDataFromURL(from: soonacularApiURL) { (recipesData) in
