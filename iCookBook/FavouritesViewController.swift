@@ -21,13 +21,13 @@ class FavouritesViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil) //Design settings for SearchBar
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
+        navigationItem.searchController?.searchBar.tintColor = .black
         
         let title = UIImage(named: "title.png")  //Title logo "iCookBook"
         let imageView = UIImageView(image:title)
         self.navigationItem.titleView = imageView
         
-        favouritesCollectionView.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
+        favouritesCollectionView.backgroundColor = .saturatedGreenColor
         favouritesCollectionView.delegate = self //FavouritesViewController responsible for UICollectionViewDelegate functions
         favouritesCollectionView.dataSource = self //FavouritesViewController responsible for UICollectionViewDataSource functions
         
@@ -84,7 +84,7 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.favouritesImageView.layer.masksToBounds = true
         cell.favouritesImageView.frame.origin.y = (cell.frame.size.height - cell.favouritesImageView.frame.size.height) / 2
         cell.favouritesImageView.frame.origin.x = cell.favouritesImageView.frame.origin.x - 2
-        cell.contentView.backgroundColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.00)
+        cell.contentView.backgroundColor = .cellGrey
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.masksToBounds = true
         

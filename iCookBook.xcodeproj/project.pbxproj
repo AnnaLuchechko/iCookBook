@@ -22,6 +22,7 @@
 		08BE8065245B635A001479E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08BE8063245B635A001479E3 /* Main.storyboard */; };
 		08BE8067245B635B001479E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08BE8066245B635B001479E3 /* Assets.xcassets */; };
 		08BE806A245B635B001479E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08BE8068245B635B001479E3 /* LaunchScreen.storyboard */; };
+		08C52D472475BA9700ADB6DC /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C52D462475BA9700ADB6DC /* AppColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		08BE8066245B635B001479E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08BE8069245B635B001479E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08BE806B245B635B001479E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C52D462475BA9700ADB6DC /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				08256D2E2469F31500096504 /* RecipeViewController.swift */,
 				08304C782460E2B1007F3929 /* Recipes.swift */,
 				08304C7A2462100D007F3929 /* RecipesData.swift */,
+				08C52D462475BA9700ADB6DC /* AppColors.swift */,
 				08BE8066245B635B001479E3 /* Assets.xcassets */,
 				08BE8068245B635B001479E3 /* LaunchScreen.storyboard */,
 				08BE806B245B635B001479E3 /* Info.plist */,
@@ -168,6 +171,7 @@
 				088D4535245FA0EA001B5FC2 /* FavouritesViewController.swift in Sources */,
 				08304C7B2462100D007F3929 /* RecipesData.swift in Sources */,
 				0812B8462462404F0057BFB3 /* RecipeCollectionViewCell.swift in Sources */,
+				08C52D472475BA9700ADB6DC /* AppColors.swift in Sources */,
 				086CBD6D24729E210074354F /* FavouritesCollectionViewCell.swift in Sources */,
 				08BE8062245B635A001479E3 /* ViewController.swift in Sources */,
 				088D4531245FA019001B5FC2 /* CategoriesViewController.swift in Sources */,

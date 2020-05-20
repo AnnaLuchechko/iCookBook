@@ -19,7 +19,7 @@ class CategoriesViewController: UIViewController {
         let searchController = UISearchController(searchResultsController: nil) //Design settings for SearchBar
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController?.searchBar.tintColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
+        navigationItem.searchController?.searchBar.tintColor = .saturatedGreenColor
         
         let title = UIImage(named: "title.png")  //Title logo "iCookBook"
         let imageView = UIImageView(image:title)
@@ -37,7 +37,7 @@ class CategoriesViewController: UIViewController {
         for index in categoriesUnfilledImagesArray.indices {
             let unfilledImageCategories = UIImage(named: categoriesUnfilledImagesArray[index])
             imageViews[index].image = unfilledImageCategories
-            categoryButtonLabels[index].textColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
+            categoryButtonLabels[index].textColor = .unSaturadedGreenColor
         }
         
     }
@@ -54,18 +54,11 @@ class CategoriesViewController: UIViewController {
                                            "main course", "side dishes", "desserts",
                                            "snacks", "salads", "sweets",
                                            "soup", "drinks", "sauces"]
-        let buttonLabelColor = [UIColor(red: 0.76, green: 0.49, blue: 0.28, alpha: 1.00),
-                                UIColor(red: 0.85, green: 0.75, blue: 0.09, alpha: 1.00),
-                                UIColor(red: 0.52, green: 0.33, blue: 0.36, alpha: 1.00),
-                                UIColor(red: 0.55, green: 0.38, blue: 0.24, alpha: 1.00),
-                                UIColor(red: 0.25, green: 0.32, blue: 0.53, alpha: 1.00),
-                                UIColor(red: 0.44, green: 0.17, blue: 0.22, alpha: 1.00),
-                                UIColor(red: 0.31, green: 0.23, blue: 0.24, alpha: 1.00),
-                                UIColor(red: 0.25, green: 0.32, blue: 0.53, alpha: 1.00),
-                                UIColor(red: 0.51, green: 0.33, blue: 0.20, alpha: 1.00),
-                                UIColor(red: 0.48, green: 0.53, blue: 0.53, alpha: 1.00),
-                                UIColor(red: 0.64, green: 0.38, blue: 0.49, alpha: 1.00),
-                                UIColor(red: 0.41, green: 0.27, blue: 0.17, alpha: 1.00)]
+        
+        let buttonLabelColor: [UIColor] = [.myBreakfastOrangeColor, .myLunchYellowColor, .myDinnerGreyPinkColor,
+                                           .myMainCourseBrownColor, .mySideDishesBlueColor, .myDessertsBardoColor,
+                                           .mySnacksDarkGreyBrownColor, .mySaladsBlueColor, .mySweetsLightBrownColor,
+                                           .mySoupGreyColor, .myDrinksPinkColor, .mySaucesBrownColor]
         
         let categoriesFilledImage = UIImage(named: categoriesFilledImagesArray[sender.tag])
         imageViews[sender.tag].image = categoriesFilledImage
@@ -81,7 +74,7 @@ class CategoriesViewController: UIViewController {
         
         let unfilledImageCategories = UIImage(named: categoriesUnfilledImagesArray[sender.tag])
         imageViews[sender.tag].image = unfilledImageCategories
-        categoryButtonLabels[sender.tag].textColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
+        categoryButtonLabels[sender.tag].textColor = .unSaturadedGreenColor
     }
     
 }
