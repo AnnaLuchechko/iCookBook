@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FavouritesViewController: UIViewController {
     
@@ -91,15 +92,11 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
         if (favouriteRecipes.count > 0) {
             let recipe = favouriteRecipes[indexPath.row]
             cell.favouritesLabelView.text = recipe.title
-            self.recipesData.fetchDataFromURL(from: recipe.image) { (imageData) in //Fetch image for cell
-                if let data = imageData {
-                    DispatchQueue.main.async {
-                        cell.favouritesImageView.image = UIImage(data: data)
-                    }
-                } else {
-                    print("Error loading image");
-                }
-            }
+            
+            
+            let imageResource = ImageResource(downloadURL: recipe.image, cacheKey: recipe.image.absoluteString)
+            cell.favouritesImageView.kf.setImage(with: imageResource)  //Using Library Kingfisher to cache image
+        
         }
         return cell
     }

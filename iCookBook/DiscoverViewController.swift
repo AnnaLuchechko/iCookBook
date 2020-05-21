@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DiscoverViewController: UIViewController, UISearchBarDelegate {
 
@@ -38,7 +39,7 @@ class DiscoverViewController: UIViewController, UISearchBarDelegate {
         recipesCollectionView.dataSource = self //DiscoveViewController responsible for UICollectionViewDataSource functions
         
         if(!shownFromCategories) {
-            loadRecipes(recipe: "egg") //we go to discover
+            loadRecipes(recipe: "potatoe") //we go to discover
         }
 
         searchController.searchBar.delegate = self
@@ -124,15 +125,10 @@ extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewData
         if ((recipes?.results.count)! > 0) {
             let recipe = recipes?.results[indexPath.row]
             cell.recipeCellLabel.text = recipe?.title
-            self.recipeData.fetchDataFromURL(from: (recipe?.image)!) { (imageData) in //Fetch image for cell
-                if let data = imageData {
-                    DispatchQueue.main.async {
-                        cell.recipeCellImageView.image = UIImage(data: data)
-                    }
-                } else {
-                    print("Error loading image");
-                }
-            }
+            
+            let imageResource = ImageResource(downloadURL: recipe!.image, cacheKey: recipe!.image.absoluteString)
+            cell.recipeCellImageView.kf.setImage(with: imageResource)  //Using Library Kingfisher to cache image
+    
         }
         return cell
     }

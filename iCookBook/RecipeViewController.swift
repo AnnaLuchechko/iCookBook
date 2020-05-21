@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Kingfisher
 
 class RecipeViewController: UIViewController {
 
@@ -48,27 +49,21 @@ class RecipeViewController: UIViewController {
         let mainImage = UIImageView()   //Recipe image
         mainImage.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
         mainImage.contentMode = .scaleAspectFill
-        recipeScrollView.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
+        recipeScrollView.backgroundColor = .saturatedGreenColor
         recipeScrollView.addSubview(mainImage)
 
-        let image = URL(string: imageURL)   //Get image from API for recipe
-        self.recipesData.fetchDataFromURL(from: (image)!) { (imageData) in
-            if let data = imageData {
-                DispatchQueue.main.async {
-                    mainImage.image = UIImage(data: data)
-                }
-            } else {
-                print("Error loading image")
-            }
-        }
+        let imageUrl = URL(string: imageURL)   //Get image from API for recipe
+        
+        let imageResource = ImageResource(downloadURL: imageUrl!, cacheKey: imageURL)
+        mainImage.kf.setImage(with: imageResource)  //Using Library Kingfisher to cache image
     
         let ingridientsLabel = UILabel()    //Ingredients settings for recipe
         ingridientsLabel.text = "INGRIDIENTS"
         ingridientsLabel.frame.origin = CGPoint(x: 5, y: mainImage.frame.origin.y + mainImage.frame.size.height + 2)
-        ingridientsLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
+        ingridientsLabel.backgroundColor = .unSaturadedGreenColor
         ingridientsLabel.layer.cornerRadius = 10
         ingridientsLabel.textAlignment = .center
-        ingridientsLabel.textColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
+        ingridientsLabel.textColor = .saturatedGreenColor
         ingridientsLabel.layer.masksToBounds = true
         ingridientsLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
         recipeScrollView.addSubview(ingridientsLabel)
@@ -87,7 +82,7 @@ class RecipeViewController: UIViewController {
                 
                 let bottomBorder = UIView()
                 bottomBorder.frame = CGRect(x: 0, y: textBackground.frame.size.height, width: textBackground.frame.size.width, height: 1)
-                bottomBorder.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
+                bottomBorder.backgroundColor = .unSaturadedGreenColor
                 textBackground.addSubview(bottomBorder) //Add lines for each ingredient
                 
                 let label = UILabel()
@@ -110,10 +105,10 @@ class RecipeViewController: UIViewController {
         let preparationLabel = UILabel()    //Prearation settings for recipe
         preparationLabel.text = "PREPARATION"
         preparationLabel.frame.origin = CGPoint(x: 5, y: labelOriginY + 5)
-        preparationLabel.backgroundColor = UIColor(red: 0.21, green: 0.58, blue: 0.49, alpha: 1.00)
+        preparationLabel.backgroundColor = .unSaturadedGreenColor
         preparationLabel.layer.cornerRadius = 10
         preparationLabel.textAlignment = .center
-        preparationLabel.textColor = UIColor(red: 0.92, green: 0.93, blue: 0.93, alpha: 1.00)
+        preparationLabel.textColor = .saturatedGreenColor
         preparationLabel.layer.masksToBounds = true
         preparationLabel.frame.size = CGSize(width: self.view.frame.size.width - 10, height: 30)
         recipeScrollView.addSubview(preparationLabel)
@@ -128,7 +123,7 @@ class RecipeViewController: UIViewController {
                 textBackground.frame.size.height = 30
                 textBackground.frame.origin.x = 5
                 textBackground.frame.origin.y = labelOriginY
-                textBackground.backgroundColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1.00)
+                textBackground.backgroundColor = .cellGrey
                 textBackground.layer.masksToBounds = true
                 textBackground.layer.cornerRadius = 10
                 

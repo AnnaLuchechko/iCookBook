@@ -15,6 +15,7 @@ class TabBarController: UITabBarController {
         
         self.tabBar.unselectedItemTintColor = UIColor.black // Text color of unselected items
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont (name: "HelveticaNeue", size: 11)!], for: .normal)
+        
         // UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.red], for: .normal)
         // Text color of all items
         
