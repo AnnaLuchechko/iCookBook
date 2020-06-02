@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		080F7881245FC5D400BB2A51 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080F7880245FC5D400BB2A51 /* TabBarController.swift */; };
 		0812B8462462404F0057BFB3 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0812B8452462404F0057BFB3 /* RecipeCollectionViewCell.swift */; };
+		081D83742486DFEB00418845 /* DiscoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081D83732486DFEB00418845 /* DiscoverView.xib */; };
 		08256D2F2469F31500096504 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08256D2E2469F31500096504 /* RecipeViewController.swift */; };
 		08304C792460E2B1007F3929 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08304C782460E2B1007F3929 /* Recipes.swift */; };
 		08304C7B2462100D007F3929 /* RecipesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08304C7A2462100D007F3929 /* RecipesData.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		080F7880245FC5D400BB2A51 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0812B8452462404F0057BFB3 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		081D83732486DFEB00418845 /* DiscoverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverView.xib; sourceTree = "<group>"; };
 		08256D2E2469F31500096504 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		08304C782460E2B1007F3929 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		08304C7A2462100D007F3929 /* RecipesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesData.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				080F7880245FC5D400BB2A51 /* TabBarController.swift */,
 				088D4530245FA019001B5FC2 /* CategoriesViewController.swift */,
 				088D4532245FA0B0001B5FC2 /* DiscoverViewController.swift */,
+				081D83732486DFEB00418845 /* DiscoverView.xib */,
 				088D4534245FA0EA001B5FC2 /* FavouritesViewController.swift */,
 				08BE8063245B635A001479E3 /* Main.storyboard */,
 				086CBD6C24729E210074354F /* FavouritesCollectionViewCell.swift */,
@@ -118,7 +121,6 @@
 				3593EDB8E97204C3AB15D8CE /* Pods-iCookBook.debug.xcconfig */,
 				931207F73E9BD919D4FAB102 /* Pods-iCookBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -182,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081D83742486DFEB00418845 /* DiscoverView.xib in Resources */,
 				08BE806A245B635B001479E3 /* LaunchScreen.storyboard in Resources */,
 				08BE8067245B635B001479E3 /* Assets.xcassets in Resources */,
 				08BE8065245B635A001479E3 /* Main.storyboard in Resources */,
